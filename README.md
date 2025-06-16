@@ -4,7 +4,6 @@
 
 b站有演示：https://www.bilibili.com/video/BV1mxjgzPEer/?share_source=copy_web&vd_source=4e1f5a80e26a44a2d0bb8612a4952199
 
-这是我第一次从零开始一个项目一直到发布，还有很多不完善的地方，请大家多多包涵。在这里记录一下实现的内容和一点心得:
 
 0. 窗口（桌宠本体）无边框透明置顶，不在任务栏显示（Qt::Tool），在状态栏显示(QSystemTrayIcon)，拖拽移动窗口.
     注意窗口类型设置为Qt::Tool之后关闭窗口不会退出程序，我的解决方法是重写`closeEvent()`关闭时发送信号给QApplication，让它执行`quit()`
